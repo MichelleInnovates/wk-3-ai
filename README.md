@@ -1,5 +1,4 @@
-# wk-3-ai
-Perfect — you’ve got the full **Part 1 (Theoretical)** written out beautifully 👏🏽
+##**Part 1 (Theoretical)** 
 The next best step is to package it neatly for your **final submission** (PDF + GitHub).
 
 Here’s what I recommend next:
@@ -17,7 +16,7 @@ Here’s a polished README template you can drop straight into your repo 👇�
 
 ### Author: Michelle  
 **Submission Date:** November 2025  
-**Tools Used:** Scikit-learn | TensorFlow | PyTorch | spaCy | Streamlit  
+**Tools Used:** Scikit-learn | TensorFlow | PyTorch | spaCy |
 
 ---
 
@@ -77,14 +76,6 @@ Includes:
 
 ---
 
-## 🚀 Bonus: Model Deployment
-Folder: [`Bonus_Streamlit_App/`](./Bonus_Streamlit_App/)
-
-- **Framework:** Streamlit  
-- **Goal:** Interactive MNIST digit classifier  
-- **Live Demo:** [Streamlit App Link](#) *(replace with your deployed URL)*  
-- **Screenshot:** Included in report PDF
-
 ---
 
 ## 🗂️ Project Structure
@@ -98,9 +89,7 @@ AI_Assignment/
 │   ├── Task3_spaCy_NLP.ipynb
 │
 ├── Part3_Ethics_Optimization.pdf
-├── Bonus_Streamlit_App/
-│   ├── app.py
-│   └── requirements.txt
+
 │
 └── README.md
 ````
