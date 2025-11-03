@@ -1,0 +1,12 @@
+1. Ethical Considerations
+Potential Biases:
+
+MNIST Model: The MNIST dataset, while classic, is not perfectly representative of all human handwriting. Bias could exist in terms of demographics (handwriting styles may vary by age, nationality, or handedness) or quality (it contains well-centered, clean digits, which may not reflect real-world messy handwriting). A model trained on it might perform worse for underrepresented handwriting styles.
+
+Amazon Reviews Model: This is highly susceptible to bias. Demographic bias can arise if the training data is primarily from one country or culture, causing the model to misunderstand slang, idioms, or cultural references from other regions. Product bias can occur if reviews for certain categories (e.g., electronics) dominate the dataset, making the model's sentiment analysis less accurate for other categories (e.g., books, clothing).
+
+Mitigation Strategies:
+
+TensorFlow Fairness Indicators (TFFI): This tool can be used to mitigate bias in the MNIST model. You could add metadata to your dataset (e.g., source of the handwriting, if known) and use TFFI to compute and visualize model performance metrics across these different subgroups. If you find the model is significantly less accurate for one group, you can address this through techniques like data augmentation (e.g., rotating, shifting digits) or by collecting more data from the underperforming group.
+
+spaCy’s Rule-Based Systems: For the Amazon review analysis, a rule-based system is inherently more transparent than a black-box model. To mitigate bias, you can manually audit and expand your sentiment keyword lists to include a more diverse vocabulary and account for different contexts. For example, "sick" could be negative ("I am sick") or positive ("That was a sick trick!"). You can create rules within spaCy to check the surrounding words (dependencies) to better determine the intended sentiment, making the system fairer and more explainable.

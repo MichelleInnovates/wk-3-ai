@@ -1,0 +1,39 @@
+Q1: Explain the primary differences between TensorFlow and PyTorch. When would you choose one over the other?
+
+The primary differences between TensorFlow and PyTorch revolve around their graph-building paradigm, API style, and deployment options.
+
+Computational Graph: The most fundamental difference was historically their graph definition. PyTorch uses a dynamic computational graph (Define-by-Run), which means the graph is built on the fly as operations are executed. This makes debugging easier and is more intuitive for developers with a traditional programming background. TensorFlow 1.x used a static computational graph (Define-and-Run), where you first define the entire model architecture and then run data through it. While this allows for powerful optimizations, it can be harder to debug. TensorFlow 2.x has adopted a dynamic approach by default with Eager Execution, making it much more similar to PyTorch in this regard.
+
+API and Usability: PyTorch is often praised for its "Pythonic" feel. Its API is considered more intuitive and cleaner, closely integrating with the Python ecosystem (like NumPy). TensorFlow, especially with its high-level API Keras, has also become very user-friendly, but its comprehensive ecosystem can sometimes feel more complex to navigate.
+
+Deployment & Ecosystem: TensorFlow has a more mature and robust ecosystem for production deployment, with tools like TensorFlow Serving, TensorFlow Lite (for mobile/edge devices), and TensorFlow.js (for in-browser execution). PyTorch is catching up with TorchServe and PyTorch Live, but TensorFlow historically has had an edge in production environments.
+
+When to choose one:
+
+Choose PyTorch for: Research, rapid prototyping, and projects where flexibility and easy debugging are top priorities. Its Python-native feel makes it a favorite in academia.
+
+Choose TensorFlow for: Large-scale production deployments, especially when you need to deploy models to mobile, edge (IoT), or web environments. Its comprehensive ecosystem is a major advantage for end-to-end MLOps.
+
+Q2: Describe two use cases for Jupyter Notebooks in AI development.
+
+Jupyter Notebooks are invaluable in AI development for their interactive and visual nature. 📝
+
+Exploratory Data Analysis (EDA) and Prototyping: Notebooks allow developers to write and execute code in small, manageable cells. You can load a dataset, visualize distributions with libraries like Matplotlib or Seaborn, test data preprocessing steps, and see the output immediately in the same document. This iterative process is perfect for understanding data and quickly prototyping model ideas before writing production scripts.
+
+Sharing and Collaboration: A Jupyter Notebook combines code, code output (like tables and graphs), and narrative text (using Markdown) in a single document (.ipynb file). This makes it an excellent tool for sharing research findings, creating tutorials, or collaborating with a team. A colleague can easily open the notebook, see the entire analysis workflow, and reproduce the results cell by cell.
+
+Q3: How does spaCy enhance NLP tasks compared to basic Python string operations?
+
+spaCy provides a powerful, object-oriented approach to NLP that is far more advanced than using basic Python string methods (.split(), .find(), etc.).
+
+While string operations can split text into words, they are unaware of linguistic context. spaCy, on the other hand, processes text through a pipeline of trained components to create rich Doc objects. Here’s how it enhances NLP:
+
+Linguistic Annotations: Instead of just strings, spaCy provides Token objects with a wealth of information, such as the part-of-speech tag (token.pos_), dependency parse relationship (token.dep_), and whether it's a stop word (token.is_stop).
+
+Named Entity Recognition (NER): spaCy comes with pre-trained models that can recognize and label real-world entities like persons, organizations, and locations (doc.ents). This is nearly impossible to achieve reliably with simple string matching.
+
+Efficiency and Speed: spaCy is written in Cython and is highly optimized for performance, making it suitable for processing large volumes of text in production systems, which would be incredibly slow using pure Python loops and string methods.
+
+Word Vectors: It provides easy access to pre-trained word vectors, allowing you to represent words and documents as numerical vectors to understand semantic similarity (e.g., "king" is similar to "queen").
+
+In essence, spaCy transforms raw text into structured, linguistically-aware data structures, enabling much deeper understanding and analysis.

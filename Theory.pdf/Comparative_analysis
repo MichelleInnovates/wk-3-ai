@@ -1,0 +1,10 @@
+### 2. Comparative Analysis
+
+Here is a comparison between **Scikit-learn** and **TensorFlow**:
+
+| **Feature** | **Scikit-learn** | **TensorFlow** |
+|--------------|------------------|----------------|
+| **Target Applications** | Classical Machine Learning. Best for tasks like regression, classification, clustering, and dimensionality reduction. Includes algorithms like SVMs, Random Forests, and K-Means. | Deep Learning and Large-Scale ML. Best for neural networks, computer vision (CNNs), NLP (Transformers), and reinforcement learning. |
+| **Ease of Use for Beginners** | Extremely high. Its consistent API (`.fit()`, `.predict()`, `.transform()`) makes it very beginner-friendly. Excellent documentation. | Moderate to high. With Keras, it’s easier, but concepts like tensors and graph computation add complexity. |
+| **Community Support** | Vast and mature. Huge Stack Overflow presence, strong documentation, and tutorials. A foundational library in data science. | Massive and active. Backed by Google, with extensive official guides, research papers, and pre-trained models on TensorFlow Hub. |
+| **Performance and Scalability** | Suitable for small to medium datasets that fit in memory. Not optimized for large-scale deep learning tasks. | Highly optimized for large-scale training on GPUs/TPUs. Supports distributed training and deployment across various platforms. |
